@@ -13,17 +13,9 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/wedding-cars', function () {
-    return view('wedding-cars');
-})->name('wedding-cars');
-
-Route::get('/cars-sales', function () {
-    return view('cars-sales');
-})->name('cars-sales');
-
-Route::get('/rent-cars', function () {
-    return view('rent-cars');
-})->name('rent-cars');
+Route::get('/cars', function () {
+    return view('cars');
+})->name('cars');
 
 Route::get('/service', function () {
     return view('service');
@@ -40,6 +32,3 @@ Route::get('/signin', function () {
 Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
-
-Route::get('/language/{locale}', [LanguageController::class, 'switch'])
-    ->name('language.switch');
