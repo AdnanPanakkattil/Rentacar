@@ -15,7 +15,6 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"
             rel="stylesheet">
-
         <style>
             :root {
                 --gold: #f5b800;
@@ -32,13 +31,13 @@
             }
 
             body {
-                font-family: 'Barlow', sans-serif;
+                /* font-family: 'Barlow', sans-serif; */
                 overflow-x: hidden;
             }
 
             /* ======================================
-                       HERO CAROUSEL
-                    ====================================== */
+                           HERO CAROUSEL
+                        ====================================== */
             #heroCarousel {
                 position: relative;
                 background: #000;
@@ -77,7 +76,7 @@
             .hero-content {
                 position: absolute;
                 /* Matches image: ~18% from left, vertical center */
-                font-family: "Big Shoulders", sans-serif;
+                /* font-family: "Big Shoulders", sans-serif; */
                 top: 50%;
                 left: 18%;
                 transform: translateY(-52%);
@@ -115,7 +114,7 @@
 
             /* "YOUR BEST" */
             .hero-small {
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: clamp(1rem, 2vw, 1.25rem);
                 font-weight: 700;
                 color: var(--white);
@@ -135,7 +134,7 @@
             }
 
             .hero-title-row .t-white {
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: clamp(3rem, 8vw, 6rem);
                 font-weight: 900;
                 color: var(--white);
@@ -144,7 +143,7 @@
             }
 
             .hero-title-row .t-gold {
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: clamp(3rem, 8vw, 6rem);
                 font-weight: 900;
                 color: var(--gold);
@@ -154,7 +153,7 @@
 
             /* "EXPERIENCE" */
             .hero-title-bot {
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: clamp(3rem, 8vw, 6rem);
                 font-weight: 900;
                 color: var(--white);
@@ -178,7 +177,7 @@
                 gap: 10px;
                 background: var(--gold);
                 color: #000;
-                font-family: 'Barlow', sans-serif;
+                /* font-family: 'Barlow', sans-serif; */
                 font-size: clamp(0.8rem, 1.3vw, 0.9rem);
                 font-weight: 700;
                 letter-spacing: 1.5px;
@@ -202,7 +201,7 @@
                 align-items: center;
                 gap: 14px;
                 color: var(--gold);
-                font-family: 'Barlow', sans-serif;
+                /* font-family: 'Barlow', sans-serif; */
                 font-size: clamp(0.8rem, 1.3vw, 0.9rem);
                 font-weight: 700;
                 letter-spacing: 1.5px;
@@ -291,8 +290,8 @@
             }
 
             /* ======================================
-                       CUSTOM DOT-LINE INDICATORS (bottom-left)
-                    ====================================== */
+                           CUSTOM DOT-LINE INDICATORS (bottom-left)
+                        ====================================== */
             .hero-indicators {
                 position: absolute;
                 bottom: 28px;
@@ -442,13 +441,13 @@
             }
 
             /* ======================================
-                       MARQUEE STRIP
-                    ====================================== */
+                           MARQUEE STRIP
+                        ====================================== */
             .marquee-wrap {
                 background: var(--gold);
                 overflow: hidden;
                 padding: 13px 0;
-                font-family: "Big Shoulders Inline", sans-serif;
+                /* font-family: "Big Shoulders Inline", sans-serif; */
 
             }
 
@@ -467,7 +466,7 @@
                 align-items: center;
                 gap: 12px;
                 padding: 0 28px;
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: clamp(0.85rem, 2vw, 1.15rem);
                 font-weight: 800;
                 letter-spacing: 2.5px;
@@ -511,9 +510,10 @@
                 padding: 0;
             }
 
-            body {
-                font-family: 'Barlow', sans-serif;
-            }
+            /* 
+                body {
+                    font-family: 'Barlow', sans-serif;
+                } */
 
             /* ============ SECTION ============ */
             .services-section {
@@ -584,7 +584,7 @@
             }
 
             .sec-title {
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: clamp(2rem, 4.5vw, 3.2rem);
                 font-weight: 900;
                 color: #111827;
@@ -657,7 +657,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-family: 'Barlow Condensed', sans-serif;
+                /* font-family: 'Barlow Condensed', sans-serif; */
                 font-size: 0.9rem;
                 font-weight: 900;
                 color: #111;
@@ -682,7 +682,7 @@
             .card-ttl {
                 position: relative;
                 z-index: 2;
-                font-family: 'Barlow', sans-serif;
+                /* font-family: 'Barlow', sans-serif; */
                 font-size: 1.02rem;
                 font-weight: 700;
                 color: var(--gold);
@@ -713,8 +713,8 @@
     <body>
 
         <!-- ============================
-                     CAROUSEL
-                ============================ -->
+                                 CAROUSEL
+                            ============================ -->
         <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
 
             <!-- No default BS indicators (we build custom) -->
@@ -722,8 +722,7 @@
 
                 <!-- SLIDE 1 -->
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=1600&q=80"
-                        alt="Cars lined up" />
+                    <img src="./img/homepage/carousel1.jpg" alt="carousel image">
                     <div class="hero-content">
                         <p class="hero-small">Your Best</p>
                         <div class="hero-title-row">
@@ -751,7 +750,7 @@
 
                 <!-- SLIDE 2 -->
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=80" alt="Luxury car" />
+                    <img src="./img/homepage/carousel2.webp" alt="Luxury car" />
                     <div class="hero-content">
                         <p class="hero-small">Worldwide</p>
                         <div class="hero-title-row">
@@ -779,7 +778,7 @@
 
                 <!-- SLIDE 3 -->
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=80" alt="Sports car" />
+                    <img src="./img/homepage/carousel3.jpg" alt="Sports car" />
                     <div class="hero-content">
                         <p class="hero-small">Discover</p>
                         <div class="hero-title-row">
@@ -835,8 +834,8 @@
         </section>
 
         <!-- ============================
-                     MARQUEE STRIP
-                ============================ -->
+                                 MARQUEE STRIP
+                            ============================ -->
         <div class="marquee-wrap">
             <div class="marquee-track">
                 <span class="m-item"><span class="m-icon">🚗</span>WORLDWIDE</span>
