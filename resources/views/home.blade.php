@@ -9,7 +9,6 @@
         --white: #ffffff;
     }
 
-    *,
     *::before,
     *::after {
         box-sizing: border-box;
@@ -43,7 +42,6 @@
         display: block;
     }
 
-    /* Subtle left-side dark vignette */
     .carousel-item::after {
         content: '';
         position: absolute;
@@ -55,11 +53,8 @@
         pointer-events: none;
     }
 
-    /* ---- Content Block ---- */
     .hero-content {
         position: absolute;
-        /* Matches image: ~18% from left, vertical center */
-        /* font-family: "Big Shoulders", sans-serif; */
         top: 50%;
         left: 18%;
         transform: translateY(-52%);
@@ -95,9 +90,7 @@
         }
     }
 
-    /* "YOUR BEST" */
     .hero-small {
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: clamp(1rem, 2vw, 1.25rem);
         font-weight: 700;
         color: var(--white);
@@ -106,7 +99,6 @@
         margin-bottom: 6px;
     }
 
-    /* "CAR CHOOSING" — same line */
     .hero-title-row {
         display: flex;
         flex-wrap: wrap;
@@ -117,7 +109,6 @@
     }
 
     .hero-title-row .t-white {
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: clamp(3rem, 8vw, 6rem);
         font-weight: 900;
         color: var(--white);
@@ -126,7 +117,6 @@
     }
 
     .hero-title-row .t-gold {
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: clamp(3rem, 8vw, 6rem);
         font-weight: 900;
         color: var(--gold);
@@ -134,9 +124,7 @@
         line-height: 1;
     }
 
-    /* "EXPERIENCE" */
     .hero-title-bot {
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: clamp(3rem, 8vw, 6rem);
         font-weight: 900;
         color: var(--white);
@@ -145,7 +133,6 @@
         display: block;
     }
 
-    /* Buttons */
     .hero-btns {
         display: flex;
         align-items: center;
@@ -160,7 +147,6 @@
         gap: 10px;
         background: var(--gold);
         color: #000;
-        /* font-family: 'Barlow', sans-serif; */
         font-size: clamp(0.8rem, 1.3vw, 0.9rem);
         font-weight: 700;
         letter-spacing: 1.5px;
@@ -184,7 +170,6 @@
         align-items: center;
         gap: 14px;
         color: var(--gold);
-        /* font-family: 'Barlow', sans-serif; */
         font-size: clamp(0.8rem, 1.3vw, 0.9rem);
         font-weight: 700;
         letter-spacing: 1.5px;
@@ -205,7 +190,6 @@
         flex-shrink: 0;
     }
 
-    /* Outer spinning ring */
     .play-ring {
         position: absolute;
         inset: -5px;
@@ -226,7 +210,6 @@
         }
     }
 
-    /* Pulse */
     .play-pulse {
         position: absolute;
         inset: -9px;
@@ -272,9 +255,6 @@
         border-color: var(--gold);
     }
 
-    /* ======================================
-                           CUSTOM DOT-LINE INDICATORS (bottom-left)
-                        ====================================== */
     .hero-indicators {
         position: absolute;
         bottom: 28px;
@@ -339,7 +319,6 @@
         }
     }
 
-    /* Active indicator */
     .ind-item.active .ind-dot {
         background: var(--gold);
         border-color: var(--gold);
@@ -351,7 +330,6 @@
         background: rgba(255, 255, 255, 0.18);
     }
 
-    /* Filled dots for passed slides */
     .ind-item.passed .ind-dot {
         background: var(--gold);
         border-color: var(--gold);
@@ -361,7 +339,6 @@
         background: var(--gold);
     }
 
-    /* Nav Arrows */
     .carousel-control-prev,
     .carousel-control-next {
         width: 44px;
@@ -385,14 +362,12 @@
         right: 12px;
     }
 
-
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         width: 14px;
         height: 14px;
     }
 
-    /* Slide-in animation */
     .carousel-item.active .hero-small {
         animation: fadeUp 0.6s ease both;
     }
@@ -418,17 +393,12 @@
         }
     }
 
-    /* ======================================
-                           MARQUEE STRIP
-                        ====================================== */
     .marquee-wrap {
         background: var(--gold);
         overflow: hidden;
         padding: 13px 0;
         padding-top: 40px;
         height: 100px;
-        /* font-family: "Big Shoulders Inline", sans-serif; */
-
     }
 
     .marquee-track {
@@ -449,7 +419,6 @@
         align-items: center;
         gap: 12px;
         padding: 0 28px;
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: clamp(0.85rem, 2vw, 1.15rem);
         font-weight: 800;
         letter-spacing: 2.5px;
@@ -479,6 +448,7 @@
         }
     }
 
+    /* automatic sliding section start */
     :root {
         --gold: #f5b800;
         --card-bg: #1a1f2e;
@@ -493,12 +463,6 @@
         padding: 0;
     }
 
-    /* 
-                body {
-                    font-family: 'Barlow', sans-serif;
-                } */
-
-    /* ============ SECTION ============ */
     .services-section {
         position: relative;
         background: #ffffff;
@@ -506,7 +470,6 @@
         overflow: hidden;
     }
 
-    /* Soft gold glow left + right */
     .services-section::before {
         content: '';
         position: absolute;
@@ -540,7 +503,6 @@
         z-index: 1;
     }
 
-    /* ============ HEADER ============ */
     .sec-label {
         display: inline-flex;
         align-items: center;
@@ -567,7 +529,6 @@
     }
 
     .sec-title {
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: clamp(2rem, 4.5vw, 3.2rem);
         font-weight: 900;
         color: #111827;
@@ -576,7 +537,6 @@
         letter-spacing: 0.4px;
     }
 
-    /* ============ CARDS ============ */
     .cards-row {
         margin-top: 52px;
     }
@@ -596,7 +556,6 @@
         box-shadow: 0 24px 55px rgba(0, 0, 0, 0.32);
     }
 
-    /* Gold accent bottom bar */
     .s-card::after {
         content: '';
         position: absolute;
@@ -615,7 +574,6 @@
         transform: scaleX(1);
     }
 
-    /* Triangle pattern background */
     .card-bg-pattern {
         position: absolute;
         top: 0;
@@ -627,7 +585,6 @@
         z-index: 0;
     }
 
-    /* Number badge */
     .card-num {
         position: absolute;
         top: 50%;
@@ -640,7 +597,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* font-family: 'Barlow Condensed', sans-serif; */
         font-size: 0.9rem;
         font-weight: 900;
         color: #111;
@@ -649,7 +605,6 @@
         box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
     }
 
-    /* Icon */
     .card-ico {
         position: relative;
         z-index: 2;
@@ -661,11 +616,9 @@
         height: 46px;
     }
 
-    /* Title & desc */
     .card-ttl {
         position: relative;
         z-index: 2;
-        /* font-family: 'Barlow', sans-serif; */
         font-size: 1.02rem;
         font-weight: 700;
         color: var(--gold);
@@ -691,212 +644,179 @@
         }
     }
 
+    /* card section end  */
+
 
     :root {
-        --yellow: #F5A623;
-        --yellow-dark: #e09610;
-        --dark: #111827;
-        --text: #374151;
-        --light-bg: #FFFDF5;
+        --yellow: #F5A900;
+        --dark: #1A1A2E;
+        --card-dark: #1C2033;
+        --text-muted-custom: #6c757d;
     }
 
-    /* ── ABOUT SECTION ──────────────────────────────────────────── */
-    .about-section {
-        padding: 90px 0;
-        overflow: hidden;
+    body {
+        font-family: 'Barlow', sans-serif;
+        overflow-x: hidden;
+    }
+
+    /* ========== SECTION 1: ABOUT ========== */
+    #about {
+        background: #fffdf5;
+        padding: 80px 0;
         position: relative;
+        overflow: hidden;
     }
 
-    /* subtle dot-grid decoration */
-    .about-section::before {
+    #about::before {
         content: '';
         position: absolute;
-        top: 60px;
-        left: 220px;
-        width: 140px;
-        height: 140px;
-        background-image: radial-gradient(circle, #d1d5db 1.5px, transparent 1.5px);
-        background-size: 16px 16px;
-        opacity: .45;
-        pointer-events: none;
+        top: -80px;
+        right: -80px;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(circle, rgba(245, 169, 0, 0.12) 0%, transparent 70%);
+        border-radius: 50%;
     }
 
-    /* ── IMAGE COLLAGE ──────────────────────────────────────────── */
-    .collage-wrapper {
-        position: relative;
-        width: 100%;
-        height: 480px;
-    }
-
-    .collage-img {
+    #about::after {
+        content: '';
         position: absolute;
-        object-fit: cover;
-        border-radius: 18px;
-        box-shadow: 0 16px 48px rgba(0, 0, 0, .18);
+        bottom: -60px;
+        left: -60px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(245, 169, 0, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
     }
 
-    /* top-right — lady in car */
-    .img-top {
+    /* image collage */
+    .about-images {
+        position: relative;
+        min-height: 440px;
+    }
+
+    .about-images .img-main {
+        position: absolute;
         top: 0;
         right: 0;
-        width: 62%;
-        height: 55%;
+        width: 72%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 16px;
     }
 
-    /* bottom-left — man with phone */
-    .img-bottom-left {
+    .about-images .img-bottom-left {
+        position: absolute;
         bottom: 0;
         left: 0;
-        width: 42%;
-        height: 56%;
+        width: 52%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 16px;
     }
 
-    /* bottom-right — black Mercedes */
-    .img-bottom-right {
-        bottom: 0;
-        right: 3%;
-        width: 50%;
-        height: 50%;
-    }
-
-    /* yellow experience badge */
-    .badge-experience {
+    .about-images .img-bottom-right {
         position: absolute;
-        top: 28%;
-        left: 12%;
+        bottom: 0;
+        right: 0;
+        width: 44%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .exp-badge {
+        position: absolute;
+        top: 90px;
+        left: 0;
         background: var(--yellow);
-        color: var(--dark);
         border-radius: 14px;
         padding: 20px 24px;
-        text-align: center;
-        box-shadow: 0 8px 28px rgba(245, 166, 35, .45);
         z-index: 10;
-        line-height: 1.2;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(245, 169, 0, 0.35);
     }
 
-    .badge-experience .num {
+    .exp-badge .num {
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: 2.8rem;
+        font-size: 2.6rem;
         font-weight: 800;
-        display: block;
+        color: #fff;
+        line-height: 1;
     }
 
-    .badge-experience .label {
-        font-size: .9rem;
+    .exp-badge p {
+        font-size: .85rem;
+        color: #fff;
+        margin: 0;
         font-weight: 600;
     }
 
-    /* arrow nav button */
-    .collage-nav {
-        position: absolute;
-        bottom: 26%;
-        right: -14px;
-        width: 42px;
-        height: 42px;
-        background: var(--yellow);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 1.1rem;
-        box-shadow: 0 4px 14px rgba(245, 166, 35, .55);
-        cursor: pointer;
-        z-index: 10;
-        transition: background .2s;
-    }
-
-    .collage-nav:hover {
-        background: var(--yellow-dark);
-    }
-
-    /* ── RIGHT CONTENT ──────────────────────────────────────────── */
     .section-label {
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: .85rem;
-        font-weight: 600;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-        color: var(--text);
-        margin-bottom: 14px;
-    }
-
-    .section-label .car-icon {
+        gap: 8px;
+        font-size: .8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
         color: var(--yellow);
-        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
     }
 
-    .section-title {
+    .section-label svg {
+        flex-shrink: 0;
+    }
+
+    h2.section-title {
         font-family: 'Barlow Condensed', sans-serif;
         font-size: clamp(2rem, 4vw, 3rem);
         font-weight: 800;
         color: var(--dark);
-        line-height: 1.05;
-        margin-bottom: 20px;
+        line-height: 1.1;
         text-transform: uppercase;
     }
 
-    .section-subtitle {
+    .sub-yellow {
         color: var(--yellow);
         font-weight: 600;
-        font-size: 1.1rem;
-        line-height: 1.5;
-        margin-bottom: 18px;
+        font-size: 1rem;
     }
 
-    .section-body {
-        color: #6b7280;
-        font-size: .95rem;
-        line-height: 1.75;
-        margin-bottom: 32px;
-    }
-
-    /* ── SKILL BARS ─────────────────────────────────────────────── */
+    /* progress bars */
     .skill-label {
         display: flex;
         justify-content: space-between;
         font-weight: 600;
-        font-size: .95rem;
-        color: var(--dark);
-        margin-bottom: 8px;
+        font-size: .9rem;
+        margin-bottom: 6px;
     }
 
     .progress {
         height: 6px;
-        border-radius: 99px;
-        background: #e5e7eb;
-        margin-bottom: 24px;
-        overflow: visible;
+        border-radius: 10px;
+        background: #e8e8e8;
     }
 
     .progress-bar {
         background: var(--yellow);
-        border-radius: 99px;
-        position: relative;
-        transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
+        border-radius: 10px;
     }
 
-    /* ── BOTTOM ROW ─────────────────────────────────────────────── */
-    .btn-readmore {
+    .btn-yellow {
         background: var(--yellow);
-        color: var(--dark);
+        color: #fff;
         font-weight: 700;
         font-size: .95rem;
+        padding: 14px 28px;
         border: none;
-        padding: 14px 30px;
         border-radius: 8px;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
         transition: background .2s, transform .15s;
-        text-decoration: none;
     }
 
-    .btn-readmore:hover {
-        background: var(--yellow-dark);
-        color: var(--dark);
+    .btn-yellow:hover {
+        background: #d9930a;
+        color: #fff;
         transform: translateY(-2px);
     }
 
@@ -909,44 +829,263 @@
     .call-icon {
         width: 50px;
         height: 50px;
-        background: transparent;
-        border: 2px solid var(--yellow);
+        background: var(--yellow);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--yellow);
-        font-size: 1.2rem;
         flex-shrink: 0;
     }
 
-    .call-block .call-label {
-        font-size: .82rem;
-        color: #6b7280;
-        margin-bottom: 2px;
+    .call-block small {
+        color: var(--text-muted-custom);
+        font-size: .8rem;
     }
 
-    .call-block .call-number {
+    .call-block strong {
+        font-size: 1rem;
         font-weight: 700;
-        font-size: 1.05rem;
         color: var(--dark);
     }
 
-    /* ── RESPONSIVE ─────────────────────────────────────────────── */
+    /* ========== SECTION 2: STEPS ========== */
+    #steps {
+        background: #fff;
+        padding: 80px 0;
+    }
+
+    .step-card {
+        background: var(--card-dark);
+        border-radius: 20px;
+        padding: 30px 24px 28px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        transition: transform .25s, box-shadow .25s;
+    }
+
+    .step-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .step-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(245, 169, 0, .05) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .step-icon-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .step-icon {
+        width: 52px;
+        height: 52px;
+        background: var(--yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .step-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+    }
+
+    .step-arrow {
+        color: rgba(255, 255, 255, .3);
+        font-size: 1.4rem;
+    }
+
+    .step-num {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, .12);
+        margin-left: auto;
+    }
+
+    .step-card h5 {
+        color: var(--yellow);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .step-card p {
+        color: rgba(255, 255, 255, .55);
+        font-size: .875rem;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* ========== SECTION 3: BOOKING ========== */
+    #booking {
+        padding: 60px 20px;
+        background: #f9f7f2;
+    }
+
+    .booking-wrap {
+        position: relative;
+        background: var(--dark);
+        border-radius: 24px;
+        overflow: hidden;
+        min-height: 380px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .booking-bg-img {
+        position: absolute;
+        inset: 0;
+        background: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&q=80') center/cover no-repeat;
+        opacity: .45;
+    }
+
+    .booking-person {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 0 40px;
+        flex: 0 0 auto;
+    }
+
+    .booking-person img {
+        height: 360px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 0;
+        filter: drop-shadow(0 4px 24px rgba(0, 0, 0, .5));
+    }
+
+    .booking-form-wrap {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        border-radius: 16px;
+        margin: 24px 24px 24px auto;
+        padding: 0;
+        flex: 0 0 420px;
+        max-width: 420px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
+    }
+
+    .booking-form-header {
+        background: var(--yellow);
+        padding: 18px 28px;
+        text-align: center;
+    }
+
+    .booking-form-header h3 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .booking-form-body {
+        padding: 24px 28px 28px;
+    }
+
+    .form-label-custom {
+        font-size: .8rem;
+        font-weight: 600;
+        color: #888;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .form-control-custom {
+        border: 1.5px solid #e8e8e8;
+        border-radius: 50px;
+        padding: 10px 18px;
+        font-size: .9rem;
+        width: 100%;
+        outline: none;
+        color: #444;
+        background: #fff;
+        transition: border-color .2s;
+        appearance: none;
+    }
+
+    .form-control-custom:focus {
+        border-color: var(--yellow);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .form-group-custom {
+        margin-bottom: 0;
+    }
+
     @media (max-width: 991px) {
-        .collage-wrapper {
-            height: 360px;
+        .about-images {
+            min-height: 300px;
         }
 
-        .about-section {
-            padding: 60px 0;
+        .about-images .img-main {
+            width: 75%;
+            height: 200px;
+        }
+
+        .about-images .img-bottom-left {
+            height: 180px;
+            width: 50%;
+        }
+
+        .about-images .img-bottom-right {
+            height: 160px;
+            width: 44%;
+        }
+
+        .exp-badge {
+            top: 60px;
+        }
+
+        .booking-person {
+            display: none;
+        }
+
+        .booking-form-wrap {
+            margin: 24px auto;
+            flex: 0 0 auto;
+            max-width: 100%;
+            width: 90%;
+        }
+
+        .booking-wrap {
+            justify-content: center;
+            min-height: auto;
         }
     }
 
-    @media (max-width: 767px) {
-        .collage-wrapper {
-            height: 300px;
-            margin-bottom: 40px;
+    @media (max-width: 576px) {
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .about-images {
+            min-height: 260px;
         }
     }
 </style>
@@ -1119,7 +1258,20 @@
                     <div class="card-num">01</div>
                     <!-- Icon: car/building -->
                     <div class="card-ico">
-
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Taxi sign -->
+                            <rect x="18" y="10" width="12" height="5" rx="1.5" stroke="#f5b800"
+                                stroke-width="1.8" />
+                            <!-- Car body -->
+                            <path d="M7 30 L12 19 L36 19 L41 30" stroke="#f5b800" stroke-width="2"
+                                stroke-linecap="round" />
+                            <rect x="5" y="29" width="38" height="8" rx="2" stroke="#f5b800" stroke-width="2" />
+                            <circle cx="14" cy="37" r="2.5" stroke="#f5b800" stroke-width="2" />
+                            <circle cx="34" cy="37" r="2.5" stroke="#f5b800" stroke-width="2" />
+                            <!-- Windows -->
+                            <path d="M14 19 L16 26 L22 26 L22 19" stroke="#f5b800" stroke-width="1.4" />
+                            <path d="M26 19 L26 26 L32 26 L34 19" stroke="#f5b800" stroke-width="1.4" />
+                        </svg>
                     </div>
                     <div class="card-ttl">Corporate car rental</div>
                     <div class="card-dsc">Open multiply a green form lesser their from in made herb multiply</div>
@@ -1226,118 +1378,289 @@
     </div>
 </section>
 
-<section class="about-section">
+
+<!-- section 2 end -->
+
+
+
+
+
+<!-- section 3 start -->
+<section id="about">
     <div class="container">
-        <div class="row align-items-center gy-5">
+        <div class="row align-items-center g-5">
 
-            <!-- ─── LEFT: IMAGE COLLAGE ─────────────────────────────── -->
-            <div class="col-lg-6">
-                <div class="collage-wrapper">
-
-                    <!-- top-right image: lady in luxury car -->
-                    <img
-                        class="collage-img img-top"
-                        src="https://images.unsplash.com/photo-1576134600061-45e2c9c8b2f4?w=600&q=80"
-                        alt="Passenger in luxury car" />
-
-                    <!-- bottom-left: man with phone by car -->
-                    <img
-                        class="collage-img img-bottom-left"
-                        src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&q=80"
-                        alt="Driver with phone" />
-
-                    <!-- bottom-right: black Mercedes -->
-                    <img
-                        class="collage-img img-bottom-right"
-                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=600&q=80"
-                        alt="Black luxury sedan" />
-
-                    <!-- experience badge -->
-                    <div class="badge-experience">
-                        <span class="num">50+</span>
-                        <span class="label">Years of<br>Experience</span>
+            <!-- Left: Image Collage -->
+            <div class="col-lg-6 col-md-12">
+                <div class="about-images">
+                    <!-- Badge -->
+                    <div class="exp-badge">
+                        <div class="num">50+</div>
+                        <p>Years of<br>Experience</p>
                     </div>
-
-                    <!-- nav arrow -->
-                    <div class="collage-nav">
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-
+                    <!-- Main top-right image -->
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80"
+                        alt="Passenger in car" class="img-main" />
+                    <!-- Bottom-left -->
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80"
+                        alt="Car exterior" class="img-bottom-left" />
+                    <!-- Bottom-right -->
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&q=80"
+                        alt="Luxury car" class="img-bottom-right" />
                 </div>
             </div>
-            <!-- ─── END LEFT ──────────────────────────────────────────── -->
 
-            <!-- ─── RIGHT: TEXT CONTENT ──────────────────────────────── -->
-            <div class="col-lg-6 ps-lg-5">
-
-                <!-- label -->
+            <!-- Right: Content -->
+            <div class="col-lg-6 col-md-12">
                 <div class="section-label">
-                    <i class="bi bi-car-front-fill car-icon"></i>
+                    <svg width="36" height="16" viewBox="0 0 36 16" fill="none">
+                        <path d="M2 10c2-6 8-8 14-8s12 2 14 8" stroke="#F5A900" stroke-width="2" fill="none" />
+                        <circle cx="30" cy="12" r="3" fill="#F5A900" />
+                        <circle cx="6" cy="12" r="3" fill="#F5A900" />
+                    </svg>
                     ABOUT GORENT
                 </div>
-
-                <!-- heading -->
-                <h2 class="section-title">
-                    Welcome to Gorent<br>Car Booking Company
-                </h2>
-
-                <!-- subtitle -->
-                <p class="section-subtitle">
-                    Committed to providing our customers with<br>ultimate service.
+                <h2 class="section-title mb-2">Welcome to Gorent<br>Car Booking Company</h2>
+                <p class="sub-yellow mb-3">Committed to providing our customers with ultimate service.</p>
+                <p class="text-muted mb-4" style="line-height:1.7;">
+                    Lorem ipsum is simply ipun txns mane so dummy text of free available in market the printing
+                    and typesetting industry has been the industry's standard dummy text ever.
                 </p>
 
-                <!-- body copy -->
-                <p class="section-body">
-                    Lorem ipsum is simply ipun txns mane so dummy text of free available in
-                    market the printing and typesetting industry has been the industry's standard
-                    dummy text ever.
-                </p>
-
-                <!-- skill bars -->
-                <div class="skill-label">
-                    <span>Time Awareness</span>
-                    <span>90%</span>
+                <!-- Progress bars -->
+                <div class="mb-3">
+                    <div class="skill-label"><span>Time Awareness</span><span>90%</span></div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:90%"></div>
+                    </div>
                 </div>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%"
-                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
-                <div class="skill-label">
-                    <span>Driver Experience</span>
-                    <span>70%</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 70%"
-                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
-                <!-- CTA row -->
-                <div class="d-flex align-items-center gap-4 flex-wrap mt-4">
-                    <a href="#" class="btn-readmore">
-                        Read More <i class="bi bi-arrow-right"></i>
-                    </a>
-
-                    <div class="call-block">
-                        <div class="call-icon">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <div>
-                            <div class="call-label">Call to Anytime</div>
-                            <div class="call-number">+1 (550) 250 5260</div>
-                        </div>
+                <div class="mb-4">
+                    <div class="skill-label"><span>Driver Experience</span><span>70%</span></div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:70%"></div>
                     </div>
                 </div>
 
+                <!-- CTA -->
+                <div class="d-flex align-items-center flex-wrap gap-3 mt-2">
+                    <button class="btn-yellow">Read More &rarr;</button>
+                    <div class="call-block">
+                        <div class="call-icon">
+                            <svg width="22" height="22" fill="white" viewBox="0 0 24 24">
+                                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <small>Call to Anytime</small><br>
+                            <strong>+1 (550) 250 5260</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- ─── END RIGHT ─────────────────────────────────────────── -->
 
         </div>
     </div>
 </section>
 
+<!-- section 3 end -->
 
-<!-- section 2 end -->
+
+
+
+
+
+<!-- section 4 start -->
+<section id="steps">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">
+                <svg width="36" height="16" viewBox="0 0 36 16" fill="none">
+                    <path d="M2 10c2-6 8-8 14-8s12 2 14 8" stroke="#F5A900" stroke-width="2" fill="none" />
+                    <circle cx="30" cy="12" r="3" fill="#F5A900" />
+                    <circle cx="6" cy="12" r="3" fill="#F5A900" />
+                </svg>
+                STEPS
+            </div>
+            <h2 class="section-title">Car Rental Process</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- Step 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="step-card">
+                    <div class="step-icon-row">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m-4 12h8a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2z" />
+                            </svg>
+                        </div>
+                        <span class="step-arrow">&#8594;</span>
+                        <span class="step-num">01</span>
+                    </div>
+                    <h5>Choose A Car</h5>
+                    <p>Open multipy a green form lesser their from in made herb multiply</p>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="step-card">
+                    <div class="step-icon-row">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm9 0a3 3 0 0 0 0-6M23 21v-2a4 4 0 0 0-3-3.87" />
+                            </svg>
+                        </div>
+                        <span class="step-arrow">&#8594;</span>
+                        <span class="step-num">02</span>
+                    </div>
+                    <h5>Come In Contact</h5>
+                    <p>Open multipy a green form lesser their from in made herb multiply</p>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="step-card">
+                    <div class="step-icon-row">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                        </div>
+                        <span class="step-arrow">&#8594;</span>
+                        <span class="step-num">03</span>
+                    </div>
+                    <h5>Pick-Up Locations</h5>
+                    <p>Open multipy a green form lesser their from in made herb multiply</p>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="step-card">
+                    <div class="step-icon-row">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v4l3 3" />
+                            </svg>
+                        </div>
+                        <span class="step-arrow">&#8594;</span>
+                        <span class="step-num">04</span>
+                    </div>
+                    <h5>Enjoy Driving</h5>
+                    <p>Open multipy a green form lesser their from in made herb multiply</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- section 4 end -->
+
+
+<!-- section 5 start -->
+<section id="booking">
+    <div class="container">
+        <div class="booking-wrap">
+            <!-- BG overlay -->
+            <div class="booking-bg-img"></div>
+
+            <!-- Person image -->
+            <div class="booking-person">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80&fit=crop&crop=face,top"
+                    alt="Agent" />
+            </div>
+
+            <!-- Form -->
+            <div class="booking-form-wrap">
+                <div class="booking-form-header">
+                    <h3>Book A Car</h3>
+                </div>
+                <div class="booking-form-body">
+                    <div class="form-grid mb-3">
+                        <!-- Pickup -->
+                        <div class="form-group-custom">
+                            <label class="form-label-custom">
+                                <svg width="14" height="14" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg> Pickup
+                            </label>
+                            <select class="form-control-custom">
+                                <option value="" disabled selected>Enter a Location</option>
+                                <option>New York</option>
+                                <option>Los Angeles</option>
+                                <option>Chicago</option>
+                            </select>
+                        </div>
+                        <!-- Drop off -->
+                        <div class="form-group-custom">
+                            <label class="form-label-custom">
+                                <svg width="14" height="14" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg> Drop off
+                            </label>
+                            <select class="form-control-custom">
+                                <option value="" disabled selected>Enter a Location</option>
+                                <option>Boston</option>
+                                <option>Miami</option>
+                                <option>Seattle</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-grid mb-4">
+                        <!-- Car type -->
+                        <div class="form-group-custom">
+                            <label class="form-label-custom">
+                                <svg width="14" height="14" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24">
+                                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                                    <path d="M16 8h4l3 3v5h-7V8z" />
+                                    <circle cx="5.5" cy="18.5" r="2.5" />
+                                    <circle cx="18.5" cy="18.5" r="2.5" />
+                                </svg> Your car type
+                            </label>
+                            <select class="form-control-custom">
+                                <option value="" disabled selected>Your Car Type</option>
+                                <option>Sedan</option>
+                                <option>SUV</option>
+                                <option>Convertible</option>
+                                <option>Luxury</option>
+                            </select>
+                        </div>
+                        <!-- Date -->
+                        <div class="form-group-custom">
+                            <label class="form-label-custom">
+                                <svg width="14" height="14" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                    <path d="M16 2v4M8 2v4M3 10h18" />
+                                </svg> Date
+                            </label>
+                            <input type="date" class="form-control-custom" placeholder="mm/dd/yyyy" />
+                        </div>
+                    </div>
+                    <button class="btn-yellow w-100">Book Now &rarr;</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- section 5 end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -1363,8 +1686,6 @@
     }
 
     carouselEl.addEventListener('slid.bs.carousel', e => updateIndicators(e.to));
-
-    // Individual marquee item hover → white
     document.querySelectorAll('.m-item').forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.style.color = '#fff';
@@ -1373,25 +1694,6 @@
             item.style.color = '';
         });
     });
-    const bars = document.querySelectorAll('.progress-bar');
-    bars.forEach(bar => {
-        const target = bar.style.width;
-        bar.style.width = '0';
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    bar.style.width = target;
-                    obs.disconnect();
-                }
-            });
-        }, {
-            threshold: 0.4
-        });
-        obs.observe(bar);
-    });
 </script>
-<!-- </body>
-
-    </html> -->
 
 @endsection
