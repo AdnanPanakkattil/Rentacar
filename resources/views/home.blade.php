@@ -2,19 +2,6 @@
 
 @section('content')
 
-<!-- <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Car Choosing Experience</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"
-            rel="stylesheet"> -->
 <style>
     :root {
         --gold: #f5b800;
@@ -31,13 +18,9 @@
     }
 
     body {
-        /* font-family: 'Barlow', sans-serif; */
         overflow-x: hidden;
     }
 
-    /* ======================================
-                           HERO CAROUSEL
-                        ====================================== */
     #heroCarousel {
         position: relative;
         background: #000;
@@ -707,13 +690,274 @@
             padding: 60px 0 70px;
         }
     }
+
+
+    :root {
+        --yellow: #F5A623;
+        --yellow-dark: #e09610;
+        --dark: #111827;
+        --text: #374151;
+        --light-bg: #FFFDF5;
+    }
+
+    /* ── ABOUT SECTION ──────────────────────────────────────────── */
+    .about-section {
+        padding: 90px 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* subtle dot-grid decoration */
+    .about-section::before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 220px;
+        width: 140px;
+        height: 140px;
+        background-image: radial-gradient(circle, #d1d5db 1.5px, transparent 1.5px);
+        background-size: 16px 16px;
+        opacity: .45;
+        pointer-events: none;
+    }
+
+    /* ── IMAGE COLLAGE ──────────────────────────────────────────── */
+    .collage-wrapper {
+        position: relative;
+        width: 100%;
+        height: 480px;
+    }
+
+    .collage-img {
+        position: absolute;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, .18);
+    }
+
+    /* top-right — lady in car */
+    .img-top {
+        top: 0;
+        right: 0;
+        width: 62%;
+        height: 55%;
+    }
+
+    /* bottom-left — man with phone */
+    .img-bottom-left {
+        bottom: 0;
+        left: 0;
+        width: 42%;
+        height: 56%;
+    }
+
+    /* bottom-right — black Mercedes */
+    .img-bottom-right {
+        bottom: 0;
+        right: 3%;
+        width: 50%;
+        height: 50%;
+    }
+
+    /* yellow experience badge */
+    .badge-experience {
+        position: absolute;
+        top: 28%;
+        left: 12%;
+        background: var(--yellow);
+        color: var(--dark);
+        border-radius: 14px;
+        padding: 20px 24px;
+        text-align: center;
+        box-shadow: 0 8px 28px rgba(245, 166, 35, .45);
+        z-index: 10;
+        line-height: 1.2;
+    }
+
+    .badge-experience .num {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 800;
+        display: block;
+    }
+
+    .badge-experience .label {
+        font-size: .9rem;
+        font-weight: 600;
+    }
+
+    /* arrow nav button */
+    .collage-nav {
+        position: absolute;
+        bottom: 26%;
+        right: -14px;
+        width: 42px;
+        height: 42px;
+        background: var(--yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 14px rgba(245, 166, 35, .55);
+        cursor: pointer;
+        z-index: 10;
+        transition: background .2s;
+    }
+
+    .collage-nav:hover {
+        background: var(--yellow-dark);
+    }
+
+    /* ── RIGHT CONTENT ──────────────────────────────────────────── */
+    .section-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: .85rem;
+        font-weight: 600;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--text);
+        margin-bottom: 14px;
+    }
+
+    .section-label .car-icon {
+        color: var(--yellow);
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        color: var(--dark);
+        line-height: 1.05;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .section-subtitle {
+        color: var(--yellow);
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .section-body {
+        color: #6b7280;
+        font-size: .95rem;
+        line-height: 1.75;
+        margin-bottom: 32px;
+    }
+
+    /* ── SKILL BARS ─────────────────────────────────────────────── */
+    .skill-label {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: .95rem;
+        color: var(--dark);
+        margin-bottom: 8px;
+    }
+
+    .progress {
+        height: 6px;
+        border-radius: 99px;
+        background: #e5e7eb;
+        margin-bottom: 24px;
+        overflow: visible;
+    }
+
+    .progress-bar {
+        background: var(--yellow);
+        border-radius: 99px;
+        position: relative;
+        transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* ── BOTTOM ROW ─────────────────────────────────────────────── */
+    .btn-readmore {
+        background: var(--yellow);
+        color: var(--dark);
+        font-weight: 700;
+        font-size: .95rem;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: background .2s, transform .15s;
+        text-decoration: none;
+    }
+
+    .btn-readmore:hover {
+        background: var(--yellow-dark);
+        color: var(--dark);
+        transform: translateY(-2px);
+    }
+
+    .call-block {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .call-icon {
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border: 2px solid var(--yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--yellow);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .call-block .call-label {
+        font-size: .82rem;
+        color: #6b7280;
+        margin-bottom: 2px;
+    }
+
+    .call-block .call-number {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: var(--dark);
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 991px) {
+        .collage-wrapper {
+            height: 360px;
+        }
+
+        .about-section {
+            padding: 60px 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .collage-wrapper {
+            height: 300px;
+            margin-bottom: 40px;
+        }
+    }
 </style>
+
+<!-- carousel section start -->
 
 <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
     <div class="carousel-inner">
-
+        <!-- card 1 -->
         <div class="carousel-item active">
-            <img src="./img/homepage/carousel1.jpg" alt="carousel image">
+            <img src="./img/homepage/carousel-1.jpg" alt="carousel image">
             <div class="hero-content">
                 <p class="hero-small">Your Best</p>
                 <div class="hero-title-row">
@@ -738,9 +982,9 @@
                 </div>
             </div>
         </div>
-
+        <!-- card 2 -->
         <div class="carousel-item">
-            <img src="./img/homepage/carousel2.webp" alt="Luxury car" />
+            <img src="./img/homepage/carousel2.jpeg" alt="Luxury car" />
             <div class="hero-content">
                 <p class="hero-small">Worldwide</p>
                 <div class="hero-title-row">
@@ -765,7 +1009,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- card 3 -->
         <div class="carousel-item">
             <img src="./img/homepage/carousel3.jpg" alt="Sports car" />
             <div class="hero-content">
@@ -794,7 +1038,9 @@
         </div>
 
     </div>
+
     <!-- Custom Dot-Line Indicators -->
+
     <div class="hero-indicators" id="heroIndicators">
         <div class="ind-item active" onclick="goTo(0)">
             <span class="ind-dot"></span>
@@ -808,8 +1054,8 @@
             <span class="ind-dot"></span>
         </div>
     </div>
+    <!-- left and right arow -->
 
-    <!-- Arrows -->
     <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -820,10 +1066,9 @@
     </button>
 
 </section>
+<!-- carousel section end -->
 
-<!-- ============================
-                                 MARQUEE STRIP
-                            ============================ -->
+<!-- automatic sliding section start -->
 <div class="marquee-wrap">
     <div class="marquee-track">
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>WORLDWIDE</span>
@@ -834,7 +1079,6 @@
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>RENTAL</span>
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>LUXURY</span>
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>FLEET</span>
-        <!-- duplicate for seamless loop -->
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>WORLDWIDE</span>
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>AFFORDABLE</span>
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>PREMIUM</span>
@@ -845,28 +1089,18 @@
         <span class="m-item"><span class="m-icon"><i class="fas fa-car"></i></span>FLEET</span>
     </div>
 </div>
+<!-- automatic sliding section end -->
+
+<!-- section 2 start -->
 
 <section class="services-section">
     <div class="container">
-
-        <!-- Section Header -->
         <div class="text-center">
             <div class="sec-label justify-content-center">
                 <span class="ln"></span>
-                <!-- Car icon SVG -->
-                <svg viewBox="0 0 52 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 18 L12 8 L40 8 L45 18" stroke="#f5b800" stroke-width="1.8" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M4 18 H48 V21 Q48 23 46 23 H6 Q4 23 4 21 Z" stroke="#f5b800" stroke-width="1.8"
-                        fill="none" />
-                    <circle cx="13" cy="23" r="3" stroke="#f5b800" stroke-width="1.8" />
-                    <circle cx="39" cy="23" r="3" stroke="#f5b800" stroke-width="1.8" />
-                    <path d="M15 8 L17 14 L35 14 L37 8" stroke="#f5b800" stroke-width="1.4" fill="none" />
-                </svg>
                 <span>What We're Offering</span>
                 <span class="ln"></span>
             </div>
-
             <h2 class="sec-title">
                 Services We're Providing<br>To Customers
             </h2>
@@ -874,11 +1108,8 @@
 
         <!-- Cards -->
         <div class="row cards-row g-4">
-
-            <!-- Card 1: Corporate car rental -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="s-card">
-                    <!-- Tri pattern -->
                     <svg class="card-bg-pattern" viewBox="0 0 160 155" xmlns="http://www.w3.org/2000/svg">
                         <polygon points="160,0 160,155 0,155" fill="rgba(255,255,255,0.03)" />
                         <polygon points="160,0 160,100 60,155 120,0" fill="rgba(255,255,255,0.03)" />
@@ -888,15 +1119,7 @@
                     <div class="card-num">01</div>
                     <!-- Icon: car/building -->
                     <div class="card-ico">
-                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 32 L13 18 L35 18 L40 32" stroke="#f5b800" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <rect x="6" y="31" width="36" height="8" rx="2" stroke="#f5b800" stroke-width="2" />
-                            <circle cx="15" cy="39" r="2.5" stroke="#f5b800" stroke-width="2" />
-                            <circle cx="33" cy="39" r="2.5" stroke="#f5b800" stroke-width="2" />
-                            <path d="M16 18 L18 24 L30 24 L32 18" stroke="#f5b800" stroke-width="1.5" fill="none" />
-                            <rect x="20" y="24" width="8" height="7" rx="1" stroke="#f5b800" stroke-width="1.5" />
-                        </svg>
+
                     </div>
                     <div class="card-ttl">Corporate car rental</div>
                     <div class="card-dsc">Open multiply a green form lesser their from in made herb multiply</div>
@@ -999,10 +1222,122 @@
                     <div class="card-dsc">Open multiply a green form lesser their from in made herb multiply</div>
                 </div>
             </div>
-
-        </div><!-- /row -->
-    </div><!-- /container -->
+        </div>
+    </div>
 </section>
+
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+
+            <!-- ─── LEFT: IMAGE COLLAGE ─────────────────────────────── -->
+            <div class="col-lg-6">
+                <div class="collage-wrapper">
+
+                    <!-- top-right image: lady in luxury car -->
+                    <img
+                        class="collage-img img-top"
+                        src="https://images.unsplash.com/photo-1576134600061-45e2c9c8b2f4?w=600&q=80"
+                        alt="Passenger in luxury car" />
+
+                    <!-- bottom-left: man with phone by car -->
+                    <img
+                        class="collage-img img-bottom-left"
+                        src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&q=80"
+                        alt="Driver with phone" />
+
+                    <!-- bottom-right: black Mercedes -->
+                    <img
+                        class="collage-img img-bottom-right"
+                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=600&q=80"
+                        alt="Black luxury sedan" />
+
+                    <!-- experience badge -->
+                    <div class="badge-experience">
+                        <span class="num">50+</span>
+                        <span class="label">Years of<br>Experience</span>
+                    </div>
+
+                    <!-- nav arrow -->
+                    <div class="collage-nav">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ─── END LEFT ──────────────────────────────────────────── -->
+
+            <!-- ─── RIGHT: TEXT CONTENT ──────────────────────────────── -->
+            <div class="col-lg-6 ps-lg-5">
+
+                <!-- label -->
+                <div class="section-label">
+                    <i class="bi bi-car-front-fill car-icon"></i>
+                    ABOUT GORENT
+                </div>
+
+                <!-- heading -->
+                <h2 class="section-title">
+                    Welcome to Gorent<br>Car Booking Company
+                </h2>
+
+                <!-- subtitle -->
+                <p class="section-subtitle">
+                    Committed to providing our customers with<br>ultimate service.
+                </p>
+
+                <!-- body copy -->
+                <p class="section-body">
+                    Lorem ipsum is simply ipun txns mane so dummy text of free available in
+                    market the printing and typesetting industry has been the industry's standard
+                    dummy text ever.
+                </p>
+
+                <!-- skill bars -->
+                <div class="skill-label">
+                    <span>Time Awareness</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%"
+                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="skill-label">
+                    <span>Driver Experience</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%"
+                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <!-- CTA row -->
+                <div class="d-flex align-items-center gap-4 flex-wrap mt-4">
+                    <a href="#" class="btn-readmore">
+                        Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <div class="call-block">
+                        <div class="call-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <div class="call-label">Call to Anytime</div>
+                            <div class="call-number">+1 (550) 250 5260</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ─── END RIGHT ─────────────────────────────────────────── -->
+
+        </div>
+    </div>
+</section>
+
+
+<!-- section 2 end -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -1037,6 +1372,22 @@
         item.addEventListener('mouseleave', () => {
             item.style.color = '';
         });
+    });
+    const bars = document.querySelectorAll('.progress-bar');
+    bars.forEach(bar => {
+        const target = bar.style.width;
+        bar.style.width = '0';
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    bar.style.width = target;
+                    obs.disconnect();
+                }
+            });
+        }, {
+            threshold: 0.4
+        });
+        obs.observe(bar);
     });
 </script>
 <!-- </body>
