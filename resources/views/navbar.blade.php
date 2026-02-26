@@ -5,52 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoRent – Navbar</title>
-
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 
     <style>
         :root {
-            --dark-bg: #1a1e2e;
+            --dark: #1a1e2e;
             --gold: #f5a623;
-            --gold-dark: #d4891a;
-            --white: #ffffff;
-            --light-gray: #e5e7ef;
-            --text-muted-top: #aab0c0;
-        }
-
-        * {
+            --muted: #aab0c0;
             font-family: 'Nunito', sans-serif;
         }
-
-        /* ── TOP BAR ─────────────────────────────────────────── */
         .top-bar {
-            background: var(--dark-bg);
-            font-size: 0.78rem;
-            color: var(--text-muted-top);
+            background: var(--dark);
+            font-size: .78rem;
+            color: var(--muted);
             padding: 7px 0;
         }
 
         .top-bar a {
-            color: var(--text-muted-top);
+            color: var(--muted);
             text-decoration: none;
-            transition: color .2s;
         }
 
-        .top-bar a:hover {
+        .top-bar a:hover,
+        .top-bar .bi {
             color: var(--gold);
         }
 
         .top-bar .bi {
-            color: var(--gold);
             margin-right: 5px;
-            font-size: 0.85rem;
+            font-size: .85rem;
         }
 
         .top-bar .sep {
@@ -58,18 +46,16 @@
             margin: 0 12px;
         }
 
-        /* auth links */
         .top-bar .auth a {
-            color: var(--white);
+            color: #fff;
             font-weight: 600;
         }
 
         .top-bar .auth span {
-            color: var(--text-muted-top);
+            color: var(--muted);
             margin: 0 4px;
         }
 
-        /* social icons */
         .top-bar .social a {
             display: inline-flex;
             align-items: center;
@@ -78,73 +64,28 @@
             height: 28px;
             border: 1px solid rgba(255, 255, 255, .2);
             border-radius: 4px;
-            color: var(--white);
+            color: #fff;
             font-size: .75rem;
-            transition: background .2s, border-color .2s;
+            transition: background .2s;
         }
 
         .top-bar .social a:hover {
             background: var(--gold);
             border-color: var(--gold);
-            color: #fff;
         }
 
-        /* ── MAIN NAVBAR ─────────────────────────────────────── */
         .main-nav {
-            background: var(--white);
+            background: #fff;
             box-shadow: 0 2px 16px rgba(0, 0, 0, .08);
             padding: 10px 0;
+            position: relative;
+            z-index: 999;
         }
 
-        /* Brand / Logo */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .brand-icon {
-            width: 46px;
-            height: 46px;
-            background: var(--dark-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .brand-icon svg {
-            width: 28px;
-        }
-
-        .brand-text {
-            line-height: 1.1;
-        }
-
-        .brand-text .go {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--dark-bg);
-        }
-
-        .brand-text .rent {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--gold);
-        }
-
-        .brand-sub {
-            font-size: 0.62rem;
-            color: #888;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        /* Nav links */
         .navbar-nav .nav-link {
             font-weight: 700;
             font-size: .88rem;
-            color: var(--dark-bg) !important;
+            color: var(--dark) !important;
             padding: 6px 12px !important;
             transition: color .2s;
         }
@@ -158,12 +99,10 @@
             border-bottom: 2px solid var(--gold);
         }
 
-        /* Dropdown */
         .navbar-nav .dropdown-menu {
             border: none;
             box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
             border-radius: 8px;
-            min-width: 170px;
             padding: 8px 0;
         }
 
@@ -171,7 +110,7 @@
             font-size: .85rem;
             font-weight: 600;
             padding: 7px 18px;
-            color: var(--dark-bg);
+            color: var(--dark);
         }
 
         .navbar-nav .dropdown-item:hover {
@@ -179,50 +118,12 @@
             color: var(--gold);
         }
 
-        /* Search & Cart icons */
-        .nav-icons {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .nav-icons .icon-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.15rem;
-            color: var(--dark-bg);
-            position: relative;
-            transition: color .2s;
-        }
-
-        .nav-icons .icon-btn:hover {
-            color: var(--gold);
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: -6px;
-            right: -7px;
-            background: var(--gold);
-            color: #fff;
-            font-size: 0.58rem;
-            font-weight: 800;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Phone CTA */
         .phone-cta {
             display: flex;
             align-items: center;
             gap: 10px;
-            border-radius: 50px;
             padding: 7px 16px 7px 8px;
+            border-radius: 50px;
         }
 
         .phone-icon-wrap {
@@ -233,7 +134,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
         }
 
         .phone-icon-wrap .bi {
@@ -242,18 +142,16 @@
         }
 
         .phone-cta .label {
-            font-size: 0.68rem;
+            font-size: .68rem;
             color: #888;
         }
 
         .phone-cta .number {
             font-size: 1rem;
             font-weight: 800;
-            color: var(--dark-bg);
-            line-height: 1.1;
+            color: var(--dark);
         }
 
-        /* Hamburger color */
         .navbar-toggler {
             border: none;
             padding: 4px 6px;
@@ -275,23 +173,258 @@
             height: 3px;
             border-radius: 2px;
             background: var(--gold);
-            transition: all .3s;
+            transition: all 0.3s ease;
         }
 
-        /* ── RESPONSIVE tweaks ───────────────────────────────── */
+        .language-selector {
+            background: black;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            width: 110px;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .language-slider {
+            position: absolute;
+            width: 50px;
+            height: calc(100% - 10px);
+            background: #f5b800;
+            border-radius: 25px;
+            transition: left 0.3s ease;
+            left: 5px;
+        }
+
+        .language-option {
+            position: relative;
+            z-index: 1;
+            width: 50px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            color: white;
+        }
+
+        .language-option.active {
+            color: black;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            padding: 28px 28px 40px;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 0.35s cubic-bezier(0.77, 0, 0.18, 1),
+                opacity 0.35s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-overlay.open {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .mobile-overlay-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .mobile-overlay-header .language-selector {
+            background: #111;
+        }
+
+        .mobile-close-btn {
+            width: 42px;
+            height: 42px;
+            border: none;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .mobile-close-btn .bi {
+            font-size: 1.8rem;
+            color: #222;
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        .mobile-nav-list li {
+            border-bottom: 1px solid #f0f0f0;
+            opacity: 0;
+            transform: translateX(-24px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .mobile-overlay.open .mobile-nav-list li:nth-child(1) {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: .08s;
+        }
+
+        .mobile-overlay.open .mobile-nav-list li:nth-child(2) {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: .13s;
+        }
+
+        .mobile-overlay.open .mobile-nav-list li:nth-child(3) {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: .18s;
+        }
+
+        .mobile-overlay.open .mobile-nav-list li:nth-child(4) {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: .23s;
+        }
+
+        .mobile-overlay.open .mobile-nav-list li:nth-child(5) {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: .28s;
+        }
+
+        .mobile-overlay.open .mobile-nav-list li:nth-child(6) {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: .33s;
+        }
+
+        .mobile-nav-list li a {
+            display: block;
+            padding: 18px 0;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #1a1e2e;
+            text-decoration: none;
+            letter-spacing: .02em;
+            transition: color .2s;
+        }
+
+        .mobile-nav-list li a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-nav-list li a .num {
+            font-size: .78rem;
+            font-weight: 700;
+            color: #bbb;
+            margin-right: 10px;
+            letter-spacing: .05em;
+        }
+
+        .mobile-social-float {
+            position: fixed;
+            right: 18px;
+            bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 10000;
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.4s ease 0.35s, transform 0.4s ease 0.35s;
+        }
+
+        .mobile-overlay.open~.mobile-social-float,
+        .mobile-social-float.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-social-float a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .mobile-social-float a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .22);
+        }
+
+        .mobile-social-float a.whatsapp {
+            background: #25d366;
+        }
+
+        .mobile-social-float a.viber {
+            background: #7360f2;
+        }
+
+        .mobile-social-float a.instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+        }
+
+        .mobile-social-float a .bi {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+        .hamburger-icon{
+            font-size:40px;
+            color: #f5b800;
+        }
+
         @media (max-width: 991.98px) {
             .phone-cta {
                 display: none;
             }
 
-            .navbar-collapse {
-                padding: 10px 0 6px;
+            #mainNav {
+                display: none !important;
             }
 
             .navbar-nav .nav-link.active {
                 border-bottom: none;
                 border-left: 3px solid var(--gold);
                 padding-left: 10px !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            .navbar-toggler {
+                display: none;
+            }
+
+            .mobile-overlay {
+                display: none !important;
+            }
+
+            .mobile-social-float {
+                display: none !important;
+            }
+
+            #mainNav {
+                display: flex !important;
             }
         }
 
@@ -304,10 +437,6 @@
 </head>
 
 <body>
-
-    <!-- ══════════════════════════════════════════════════
-     TOP BAR
-══════════════════════════════════════════════════ -->
     <div class="top-bar">
         <div class="container-xl">
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
@@ -341,28 +470,17 @@
             </div>
         </div>
     </div>
-
-    <!-- ══════════════════════════════════════════════════
-     MAIN NAVBAR
-══════════════════════════════════════════════════ -->
     <nav class="navbar navbar-expand-lg main-nav sticky-top">
         <div class="container-xl">
 
             <!-- Brand -->
             <a class="navbar-brand me-lg-4" href="#">
-                <img src="img/navbar/logo-1.png" alt="">
+                <img src="img/navbar/logo-1.png" alt="GoRent Logo" style="height:40px;" />
             </a>
-
-            <!-- Toggler -->
-            <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mainNav">
-                <div class="hamburger-icon"><span></span><span></span><span></span></div>
+            <button class="navbar-toggler ms-auto me-2" type="button" id="overlayOpenBtn" aria-label="Open menu">
+                <div class="hamburger-icon"><i class="bi bi-filter-right"></i></div>
             </button>
-
-            <!-- Collapsible content -->
             <div class="collapse navbar-collapse" id="mainNav">
-
-                <!-- Nav Links -->
                 <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
 
                     <li class="nav-item">
@@ -372,7 +490,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}"
-                            href="{{ route('about') }}">About</a>
+                            href="{{ route('about') }}">About Us</a>
                     </li>
 
                     <li class="nav-item">
@@ -382,17 +500,23 @@
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('service') ? 'active' : '' }}"
-                            href="{{ route('service') }}">Service</a>
+                            href="{{ route('service') }}">Services</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
-                            href="{{ route('contact') }}">Contact</a>
+                            href="{{ route('contact') }}">Contact Us</a>
                     </li>
 
                 </ul>
-                <!-- Right: icons + phone CTA -->
+
+                <!-- Right: language + phone CTA -->
                 <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="language-selector" id="langToggle">
+                        <div class="language-slider" id="langSlider"></div>
+                        <span class="language-option active" id="enOption" data-language="en">EN</span>
+                        <span class="language-option" id="arOption" data-language="ar">AR</span>
+                    </div>
 
                     <!-- Phone CTA -->
                     <div class="phone-cta ms-2">
@@ -404,19 +528,94 @@
                             <div class="number">+236 (456) 896 22</div>
                         </div>
                     </div>
-
                 </div>
+
             </div><!-- /collapse -->
 
         </div>
     </nav>
 
+
+    <!-- mobile responsive start -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+        <div class="mobile-overlay-header">
+            <div class="language-selector" id="overlayLangToggle">
+                <div class="language-slider" id="overlayLangSlider"></div>
+                <span class="language-option active" data-language="en">EN</span>
+                <span class="language-option" data-language="ar">AR</span>
+            </div>
+
+            <button class="mobile-close-btn" id="overlayCloseBtn" aria-label="Close menu">
+                <i class="bi bi-x"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li>
+                <a href="{{ route('home') }}">
+                    <span class="num">01.</span> Home
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('service') }}">
+                    <span class="num">02.</span> Services
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('about') }}">
+                    <span class="num">04.</span> About Us
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('contact') }}">
+                    <span class="num">05.</span> Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="num">06.</span> Offer
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- mobile responsive start -->
+
+
+    <!-- Page Content start -->
     <div class="">
         @yield('content')
     </div>
+    <!-- Page Content end -->
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // mobile respon sive
+        const overlay = document.getElementById('mobileOverlay');
+        const openBtn = document.getElementById('overlayOpenBtn');
+        const closeBtn = document.getElementById('overlayCloseBtn');
+        const socialFloat = document.getElementById('mobileSocialFloat');
+
+        function openOverlay() {
+            overlay.classList.add('open');
+            overlay.setAttribute('aria-hidden', 'false');
+            socialFloat.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeOverlay() {
+            overlay.classList.remove('open');
+            overlay.setAttribute('aria-hidden', 'true');
+            socialFloat.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openOverlay);
+        closeBtn.addEventListener('click', closeOverlay);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeOverlay();
+        });
+    </script>
+
 </body>
 
 </html>
